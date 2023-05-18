@@ -10,7 +10,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
   return (
     <Box width={"full"} height={"full"}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "Your_API_KEY" }}
+        bootstrapURLKeys={{ key: "AIzaSyATEHrOezClUoUyOiGaFBlowEYWNlmDD1o" }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={10}
@@ -26,7 +26,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
         }}
       >
         {places?.map((place, i) => (
-          <Box
+          <Box key={i}
             lat={Number(place.latitude)}
             lng={Number(place.longitude)}
             position={"relative"}
